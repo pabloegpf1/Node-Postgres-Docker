@@ -4,6 +4,16 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+const Sequelize = require('sequelize')
+, config = require(__dirname + "/config/config")
+var sequelize = new Sequelize(
+  config.postgres.database,
+  config.postgres.username, 
+  config.postgres.password, {
+    host: config.postgres.host,
+    dialect:  'postgres'
+  })
+
 var indexRouter = require('./routes/index');
 
 var app = express();
@@ -24,6 +34,14 @@ app.use('/', indexRouter);
 app.use(function (req, res, next) {
   next(createError(404));
 });
+
+sequelize.authenticate()
+  .then(() => {
+    console.log('Connection has been established successfully.');
+  })
+  .catch(err => {
+    console.error('Unable to connect to the database:', err);
+  });
 
 // error handler
 app.use(function (err, req, res, next) {
