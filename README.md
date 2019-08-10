@@ -2,9 +2,9 @@
 
 This is a template for future projects based on Node.js with Express and Postgres. 
 
-The idea is to use docker-compose to create 2 microservices (Node server and Postgres db) and to connect both, all in a single command. 
+The idea is to use docker-compose to create 2 microservices (Node server and Postgres db) and connect both, all in a single command. 
 
-The volumes defined in the .yml file make it possible to use nodemon to edit the code and see the chages in real time while the container runs. This is very useful during development.
+The volumes defined in the .yml file makes it possible to use nodemon to edit the code and see the chages in real time while the container is running. This is very useful during development.
 
 ## How to run
 
