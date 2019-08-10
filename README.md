@@ -8,7 +8,7 @@ The volumes defined in the .yml file make it possible to use nodemon to edit the
 
 ## How to run
 
-1. Install Docker.
+1. Install [Docker](https://www.docker.com/).
 2. Download or clone this repo.
 3. cd into /Node-Postgres-Docker
 4. Create a file and name it ".env" in the root directory
