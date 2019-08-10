@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Users</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+
+  <h1>Users</h1>
+  <table>
+    <tr>
+        <th>Firstname</th>
+        <th>Lastname</th> 
+    </tr>
+      <% for(let i = 0; i<users.length; i++){ %>
+      <tr>
+        <td><%= users[i].first_name %></td>
+        <td><%= users[i].last_name %></td> 
+      </tr>
+      <%}%>
+    </table>
+
+</body>
+
+</html>
