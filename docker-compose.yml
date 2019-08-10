@@ -12,7 +12,7 @@ services:
     depends_on:
       - db
     environment:
-      DB_HOST: db
+      DB_HOST: host.docker.internal
 
   db:
     image: postgres:alpine
@@ -21,4 +21,4 @@ services:
       POSTGRES_PASSWORD: ${DB_PASSWORD}
       POSTGRES_DB: ${DB_NAME}
     ports:
-    - "5432:5432"
+    - "${DB_PORT}:5432"
