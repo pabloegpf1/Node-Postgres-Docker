@@ -10,9 +10,13 @@ services:
       - 3000:3000
     depends_on:
       - db
-    network_mode: "host" # Comment this line if host is Windows/macOS
+    network_mode: "host" #Comment this line if using a if using a Windows/macOS host host
     environment:
-      DB_HOST: localhost # Change to host.docker.internal if host is Windows/macOS
+      DB_HOST:  localhost # IMPORTANT: Change this to "host.docker.internal" if using a Windows/macOS host
+      DB_PW: ${DB_PW}
+      DB_USER: ${DB_USER}
+      DB_DATABASE: ${DB_NAME}
+      DB_PORT: ${DB_PORT:-5432}
 
   db:
     image: postgres:alpine
