@@ -11,8 +11,9 @@ services:
       - 3000:3000
     depends_on:
       - db
+    network_mode: "host"
     environment:
-      DB_HOST: host.docker.internal
+      DB_HOST: localhost
 
   db:
     image: postgres:alpine
@@ -22,3 +23,5 @@ services:
       POSTGRES_DB: ${DB_NAME}
     ports:
     - "${DB_PORT}:5432"
+
+

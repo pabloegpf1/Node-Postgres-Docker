@@ -8,7 +8,10 @@ services:
   - docker
 
 script:
-  - docker build .
   - docker-compose up
+
+  
+after_script:
+  - docker-compose down
 
 deploy:
