@@ -6,14 +6,13 @@ services:
     command: npm run dev
     volumes:
       - ./:/usr/src/app
-      - ./node_modules:/usr/src/app/node_modules
     ports:
       - 3000:3000
     depends_on:
       - db
-    network_mode: "host"
+    network_mode: "host" #Comment this line if using a if using a Windows/macOS host host
     environment:
-      DB_HOST: localhost
+      DB_HOST:  localhost # IMPORTANT: Change this to "host.docker.internal" if using a Windows/macOS host
 
   db:
     image: postgres:alpine
