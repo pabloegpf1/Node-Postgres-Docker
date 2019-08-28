@@ -16,7 +16,7 @@ The volumes defined in the .yml file makes it possible to use nodemon to edit th
 
         DB_NAME=postgres
         DB_USER=postgres
-        DB_PASSWORD=postgres
+        DB_PW=postgres
         DB_PORT=5432 // Optional - defaults to 5432
 
 6. run:
