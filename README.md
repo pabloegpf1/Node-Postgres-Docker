@@ -8,7 +8,7 @@ The volumes defined in the .yml file makes it possible to use nodemon to edit th
 
 ## How to run
 
-1. Install [Docker](https://www.docker.com/).
+1. Install [Docker](https://docs.docker.com/install/) and [Docker-Compose](https://docs.docker.com/compose/install/).
 2. Download or clone this repo.
 3. cd into /Node-Postgres-Docker
 4. Create a file and name it ".env" in the root directory
@@ -19,5 +19,13 @@ The volumes defined in the .yml file makes it possible to use nodemon to edit th
         DB_PASSWORD=postgres
         DB_PORT=5432 // Optional - defaults to 5432
 
-6. Run "docker-compose up"
-7. The app will run in port 3000
+6. run:
+```
+docker-compose run web npm run migrate
+```
+7. Type 'y' when asked to remove a container. This will run all the migrations and must be done only the first time. 
+Then:
+```
+docker-compose up -d
+```
+8. The app will run in port 3000
