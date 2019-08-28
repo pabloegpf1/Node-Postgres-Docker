@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "nodemon -L",
-    "test": "node ./tests/exampleTest.js"
+    "dev": "knex migrate:latest && knex seed:run &&  nodemon -L"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
@@ -13,7 +12,7 @@
     "dotenv": "^8.0.0",
     "ejs": "~2.5.7",
     "express": "~4.16.0",
-    "http-errors": "~1.6.2",
+    "http-errors": "^1.6.3",
     "knex": "^0.19.1",
     "morgan": "~1.9.0",
     "pg": "^7.12.0",

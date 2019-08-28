@@ -7,9 +7,6 @@ env:
 services:
   - docker
 
-before_script:
-  - docker-compose down
-
 script:
   - docker-compose build
   - docker-compose up
