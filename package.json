@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node ./bin/www",
     "dev": "nodemon -L",
-    "test": "tests/example.js"
+    "test": "node ./tests/exampleTest.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
