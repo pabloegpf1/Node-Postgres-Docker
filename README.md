@@ -1,4 +1,4 @@
-# Node-Postgres-Docker
+# Node-Postgres-Docker [![Build Status](https://travis-ci.org/pabloegpf1/Node-Postgres-Docker.svg?branch=master)](https://travis-ci.org/pabloegpf1/Node-Postgres-Docker)
 
 This is a template for future projects based on Node.js with Express and Postgres. 
 
