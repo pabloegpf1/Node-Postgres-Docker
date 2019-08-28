@@ -15,6 +15,7 @@ script:
   - curl localhost:3000
   
 after_script:
+  - sleep 5
   - docker-compose down
 
 deploy:
