@@ -12,7 +12,7 @@ before_script:
   - docker-compose up -d
 
 script:
-  - docker-compose up -d
+  - curl localhost:3000
   
 after_script:
   - docker-compose down
