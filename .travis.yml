@@ -12,10 +12,10 @@ before_script:
   - docker-compose up -d
 
 script:
+  - sleep 5
   - curl localhost:3000
   
 after_script:
-  - sleep 5
   - docker-compose down
 
 deploy:
