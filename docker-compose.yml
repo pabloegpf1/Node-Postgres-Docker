@@ -18,7 +18,7 @@ services:
     image: postgres:alpine
     environment:
       POSTGRES_USER: ${DB_USER}
-      POSTGRES_PASSWORD: ${DB_Pw}
+      POSTGRES_PASSWORD: ${DB_PW}
       POSTGRES_DB: ${DB_NAME}
     ports:
     - "${DB_PORT}:5432"
