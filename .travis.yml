@@ -12,7 +12,7 @@ before_script:
   - docker-compose up -d
 
 script:
-  - docker ps | grep -q node-postgres-docker_web
+  - docker-compose up -d
   
 after_script:
   - docker-compose down
