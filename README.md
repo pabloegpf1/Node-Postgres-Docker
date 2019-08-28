@@ -1,14 +1,14 @@
-# Node-Postgres-Docker
+# Node-Postgres-Docker [![Build Status](https://travis-ci.org/pabloegpf1/Node-Postgres-Docker.svg?branch=master)](https://travis-ci.org/pabloegpf1/Node-Postgres-Docker)
 
 This is a template for future projects based on Node.js with Express and Postgres. 
 
-The idea is to use docker-compose to create 2 microservices (Node server and Postgres db) and to connect both, all in a single command. 
+The idea is to use docker-compose to create 2 microservices (Node server and Postgres db) and connect both, all in a single command. 
 
-The volumes defined in the .yml file make it possible to use nodemon to edit the code and see the chages in real time while the container runs. This is very useful during development.
+The volumes defined in the .yml file makes it possible to use nodemon to edit the code and see the chages in real time while the container is running. This is very useful during development.
 
 ## How to run
 
-1. Install Docker.
+1. Install [Docker](https://www.docker.com/).
 2. Download or clone this repo.
 3. cd into /Node-Postgres-Docker
 4. Create a file and name it ".env" in the root directory
@@ -17,6 +17,7 @@ The volumes defined in the .yml file make it possible to use nodemon to edit the
         DB_NAME=postgres
         DB_USER=postgres
         DB_PASSWORD=postgres
+        DB_PORT=5432 // Optional - defaults to 5432
 
 6. Run "docker-compose up"
 7. The app will run in port 3000

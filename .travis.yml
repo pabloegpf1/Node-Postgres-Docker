@@ -1,0 +1,21 @@
+env:
+  DB_NAME: postgres
+  DB_USER: postgres
+  DB_PW: postgres
+  DB_PORT: 5433 # Avoid bind: already in use from postgres service enabled by default in TravisCI.
+  
+services:
+  - docker
+
+before_script:
+  - docker-compose run web npm run migrate
+  - docker-compose up -d
+
+script:
+  - sleep 5
+  - curl localhost:3000
+  
+after_script:
+  - docker-compose down
+
+deploy:
