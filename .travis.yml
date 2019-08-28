@@ -8,6 +8,6 @@ services:
 
 script:
   - docker build .
-  - docker-compose start
+  - docker-compose up
 
 deploy:
