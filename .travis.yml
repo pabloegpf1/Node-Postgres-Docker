@@ -7,9 +7,12 @@ env:
 services:
   - docker
 
+before_script:
+  - docker-compose run web npm run migrate
+  - docker-compose up -d
+
 script:
-  - docker-compose build
-  - docker-compose up
+  - docker ps | grep -q node-postgres-docker_web
   
 after_script:
   - docker-compose down
